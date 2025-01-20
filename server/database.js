@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
-const uri = "mongodb+srv://jkp17:pendon123@cluster0.fisu0.mongodb.net/";
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";;
 
 const options = {
   serverApi: {
